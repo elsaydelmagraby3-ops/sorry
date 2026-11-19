@@ -1788,24 +1788,37 @@
           toastTimer = setTimeout(() => t.classList.remove("on"), 2400);
         }
 
-       const backgroundMusic = document.getElementById("backgroundMusic");
-const soundBtn = document.getElementById("soundBtn");
+       
+const backgroundMusic = document.getElementById("backgroundMusic");
+const soundBtn = document.getElementById("sound");
 
-let soundOn = true;
 let musicStarted = false;
 
+function updateSoundButton() {
+  if (!soundBtn) return;
+
+  const playing = !backgroundMusic.paused;
+
+  soundBtn.setAttribute("aria-pressed", String(playing));
+  soundBtn.setAttribute(
+    "aria-label",
+    playing ? "إيقاف الموسيقى" : "تشغيل الموسيقى"
+  );
+
+  soundBtn.innerHTML = playing
+    ? '♫ <span>الصوت: يعمل</span>'
+    : '♫ <span>الصوت: مقفول</span>';
+}
+
 async function startMusic() {
-  if (!backgroundMusic || musicStarted) return;
+  if (!backgroundMusic) return;
 
   try {
     backgroundMusic.volume = 0.35;
     await backgroundMusic.play();
-
     musicStarted = true;
-    soundOn = true;
     updateSoundButton();
   } catch (error) {
-    // المتصفح منع التشغيل التلقائي
     musicStarted = false;
     updateSoundButton();
   }
@@ -1813,50 +1826,42 @@ async function startMusic() {
 
 function stopMusic() {
   backgroundMusic.pause();
-  soundOn = false;
+  musicStarted = false;
   updateSoundButton();
-}
-
-function updateSoundButton() {
-  if (!soundBtn) return;
-
-  soundBtn.textContent = soundOn ? "♫" : "♪";
-  soundBtn.setAttribute(
-    "aria-label",
-    soundOn ? "إيقاف الموسيقى" : "تشغيل الموسيقى"
-  );
 }
 
 // محاولة التشغيل عند فتح الصفحة
 startMusic();
 
-// التشغيل عند أول تفاعل حقيقي
-function handleFirstInteraction() {
+// أول لمسة في الموقع تشغل الموسيقى
+function firstInteraction(event) {
+  if (soundBtn && soundBtn.contains(event.target)) return;
+
   if (!musicStarted) startMusic();
 
-  document.removeEventListener("pointerdown", handleFirstInteraction);
-  document.removeEventListener("touchstart", handleFirstInteraction);
-  document.removeEventListener("click", handleFirstInteraction);
-  document.removeEventListener("keydown", handleFirstInteraction);
+  document.removeEventListener("pointerdown", firstInteraction);
+  document.removeEventListener("touchstart", firstInteraction);
+  document.removeEventListener("keydown", firstInteraction);
 }
 
-document.addEventListener("pointerdown", handleFirstInteraction);
-document.addEventListener("touchstart", handleFirstInteraction);
-document.addEventListener("click", handleFirstInteraction);
-document.addEventListener("keydown", handleFirstInteraction);
+document.addEventListener("pointerdown", firstInteraction);
+document.addEventListener("touchstart", firstInteraction);
+document.addEventListener("keydown", firstInteraction);
 
-// زر التحكم
-if (soundBtn) {
-  soundBtn.addEventListener("click", async () => {
-    if (backgroundMusic.paused) {
-      musicStarted = false;
-      await startMusic();
-    } else {
-      stopMusic();
-      musicStarted = false;
-    }
-  });
-}
+// زر تشغيل وإيقاف الموسيقى
+soundBtn.addEventListener("click", async () => {
+  if (backgroundMusic.paused) {
+    await startMusic();
+  } else {
+    stopMusic();
+  }
+});
+
+backgroundMusic.addEventListener("play", updateSoundButton);
+backgroundMusic.addEventListener("pause", updateSoundButton);
+
+updateSoundButton();
+
         // SCROLL REVEAL
         if ("IntersectionObserver" in window) {
           const io = new IntersectionObserver(

@@ -1,0 +1,2089 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#fff7fa" />
+    <meta
+      name="description"
+      content="رسالة اعتذار من السيد إلى مريم، كُتبت بهدوء ومن القلب."
+    />
+    <title>sorry</title>
+    <link rel="icon" type="image/png" href="logo.png" />
+    <link rel="apple-touch-icon" href="logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&family=Amiri:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --bg: #fff8fa;
+        --pink: #fff0f4;
+        --rose: #d94b68;
+        --deep: #a92e50;
+        --purple: #7952a8;
+        --lav: #b99bd8;
+        --ink: #30243b;
+        --muted: #796c80;
+        --surface: #f2e8f2;
+        --white: #fff;
+        --accent: #ffe3eb;
+        --lrose: #ffb7c7;
+        --lavacc: #f3eaff;
+        --ar: "Cairo", sans-serif;
+        --en: "Poppins", sans-serif;
+        --shadow: 0 18px 55px rgba(121, 82, 168, 0.12);
+        --soft-shadow: 0 10px 30px rgba(169, 46, 80, 0.1);
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 22px;
+      }
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: var(--ar);
+        line-height: 1.9;
+        font-size: 16px;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+      body:before,
+      body:after {
+        content: "";
+        position: fixed;
+        width: 360px;
+        height: 360px;
+        border-radius: 50%;
+        filter: blur(85px);
+        opacity: 0.22;
+        pointer-events: none;
+        z-index: -1;
+      }
+      body:before {
+        background: #ffc7d7;
+        top: -150px;
+        right: -150px;
+      }
+      body:after {
+        background: #d9c4f0;
+        bottom: -170px;
+        left: -150px;
+      }
+      .en {
+        font-family: var(--en);
+        direction: ltr;
+        unicode-bidi: isolate;
+        font-size: 0.84em;
+        letter-spacing: 0.015em;
+      }
+      button,
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+      button {
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+        border: 0;
+        background: none;
+      }
+      a {
+        color: inherit;
+      }
+      :focus-visible {
+        outline: 3px solid var(--purple);
+        outline-offset: 4px;
+        border-radius: 12px;
+      }
+      .wrap {
+        width: min(1080px, calc(100% - 44px));
+        margin-inline: auto;
+      }
+      section {
+        padding: clamp(66px, 9vw, 108px) 0;
+        position: relative;
+      }
+      .sec-head {
+        max-width: 600px;
+        margin-bottom: 42px;
+      }
+      .sec-head h2 {
+        font-size: clamp(1.65rem, 4vw, 2.45rem);
+        line-height: 1.45;
+        color: var(--ink);
+      }
+      .sec-head p {
+        color: var(--muted);
+        margin-top: 8px;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--purple);
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+      }
+      .eyebrow:before {
+        content: "";
+        width: 24px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--rose), var(--lav));
+        border-radius: 5px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 48px;
+        padding: 12px 25px;
+        border-radius: 999px;
+        text-decoration: none;
+        background: linear-gradient(115deg, var(--rose), var(--deep));
+        color: white;
+        font-weight: 700;
+        box-shadow: 0 10px 25px rgba(217, 75, 104, 0.25);
+        transition: 0.25s;
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 32px rgba(217, 75, 104, 0.3);
+      }
+      .btn.ghost {
+        background: rgba(255, 255, 255, 0.82);
+        color: var(--deep);
+        border: 1px solid var(--lrose);
+        box-shadow: var(--soft-shadow);
+      }
+
+      /* HERO */
+      .hero {
+        min-height: min(850px, 100svh);
+        display: flex;
+        align-items: center;
+        padding: 80px 0 70px;
+        background:
+          radial-gradient(
+            ellipse at 12% 18%,
+            rgba(185, 155, 216, 0.2),
+            transparent 38%
+          ),
+          linear-gradient(135deg, #fff9fb 0%, #fff0f5 52%, #f6edfb 100%);
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+      }
+      .hero:before,
+      .hero:after {
+        content: "";
+        position: absolute;
+        border: 1px solid rgba(185, 155, 216, 0.25);
+        border-radius: 50%;
+        z-index: -1;
+        animation: float 9s ease-in-out infinite;
+      }
+      .hero:before {
+        width: 420px;
+        height: 420px;
+        left: -180px;
+        top: 8%;
+      }
+      .hero:after {
+        width: 260px;
+        height: 260px;
+        right: -110px;
+        bottom: -70px;
+      }
+      .hero .wrap {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 55px;
+        align-items: center;
+      }
+      .hero-copy {
+        animation: rise 0.9s both;
+      }
+      .to {
+        color: var(--purple);
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      .hero h1 {
+        font-size: clamp(2.5rem, 6.2vw, 4.6rem);
+        color: var(--deep);
+        line-height: 1.28;
+        letter-spacing: -0.035em;
+      }
+      .hero h1 span {
+        background: linear-gradient(
+          100deg,
+          var(--deep),
+          var(--rose),
+          var(--purple)
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+      .hero p.lead {
+        margin: 22px 0 30px;
+        max-width: 34em;
+        color: var(--muted);
+        font-size: clamp(1rem, 2vw, 1.15rem);
+      }
+      .hero-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .hero .tag {
+        display: block;
+        margin-top: 19px;
+        color: #a58abf;
+        font-size: 0.85rem;
+      }
+      .hook {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 8px 15px;
+        background: rgba(255, 255, 255, 0.65);
+        border: 1px solid rgba(217, 75, 104, 0.2);
+        border-radius: 50px;
+        color: var(--deep);
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+        animation: hookPulse 3s infinite;
+      }
+      .hook-dot {
+        width: 8px;
+        height: 8px;
+        background: var(--rose);
+        border-radius: 50%;
+        box-shadow: 0 0 0 5px rgba(217, 75, 104, 0.12);
+      }
+      .visual {
+        animation: rise 1s 0.15s both;
+      }
+      .paper {
+        width: 100%;
+        max-width: 410px;
+        display: block;
+        margin-inline: auto;
+        filter: drop-shadow(0 24px 32px rgba(121, 82, 168, 0.18));
+        animation: paperFloat 6s ease-in-out infinite;
+      }
+      .paper .ln {
+        stroke-dasharray: 260;
+        stroke-dashoffset: 260;
+        animation: draw 1.5s 0.6s forwards ease-out;
+      }
+      .paper .ln:nth-of-type(2) {
+        animation-delay: 0.9s;
+      }
+      .paper .ln:nth-of-type(3) {
+        animation-delay: 1.2s;
+      }
+      .paper .ln:nth-of-type(4) {
+        animation-delay: 1.5s;
+      }
+      .paper .seal {
+        transform-origin: center;
+        transform-box: fill-box;
+        animation: pop 0.7s 2s both cubic-bezier(0.3, 1.6, 0.5, 1);
+      }
+      .scroll-cue {
+        position: absolute;
+        bottom: 22px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #a58abf;
+        font-size: 0.8rem;
+        display: grid;
+        justify-items: center;
+        gap: 3px;
+      }
+      .scroll-cue i {
+        width: 1px;
+        height: 27px;
+        background: linear-gradient(var(--rose), transparent);
+        animation: scrollLine 1.6s infinite;
+      }
+
+      /* APOLOGY */
+      .apology {
+        background: rgba(255, 255, 255, 0.78);
+        backdrop-filter: blur(8px);
+      }
+      .apology .wrap {
+        display: grid;
+        grid-template-columns: 0.78fr 1.22fr;
+        gap: 65px;
+      }
+      .apology .sec-head {
+        position: sticky;
+        top: 35px;
+        align-self: start;
+        margin: 0;
+      }
+      .paras {
+        display: grid;
+        gap: 17px;
+      }
+      .paras p {
+        padding: 20px 22px;
+        border: 1px solid rgba(255, 183, 199, 0.55);
+        border-radius: 18px;
+        background: linear-gradient(120deg, #fff 0%, #fff9fb 100%);
+        box-shadow: 0 8px 25px rgba(169, 46, 80, 0.045);
+        border-inline-start: 3px solid var(--lrose);
+      }
+      .paras b {
+        color: var(--deep);
+        font-weight: 800;
+      }
+
+      /* CARDS */
+      .cards {
+        background: linear-gradient(180deg, #fff8fa, #fbf5fc);
+      }
+      .grid3 {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+        perspective: 1300px;
+      }
+      .card {
+        position: relative;
+        height: 310px;
+        text-align: start;
+        display: block;
+        width: 100%;
+        border-radius: 23px;
+        transform-style: preserve-3d;
+      }
+      .face {
+        position: absolute;
+        inset: 0;
+        border-radius: 23px;
+        padding: 25px;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        transition:
+          transform 0.75s cubic-bezier(0.2, 0.75, 0.2, 1),
+          box-shadow 0.3s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+      .face:after {
+        content: "";
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        filter: blur(1px);
+        opacity: 0.38;
+        pointer-events: none;
+        bottom: -90px;
+        left: -50px;
+        background: currentColor;
+      }
+      .front h3 {
+        font-size: 1.27rem;
+        line-height: 1.5;
+        margin-top: 8px;
+      }
+      .front .en {
+        color: var(--muted);
+      }
+      .front .hint {
+        font-size: 0.9rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .front .hint:after {
+        content: "←";
+        font-family: Arial;
+      }
+      .back {
+        transform: rotateY(180deg);
+        font-size: 1rem;
+        line-height: 2;
+        justify-content: center;
+      }
+      .card.open .front {
+        transform: rotateY(-180deg);
+      }
+      .card.open .back {
+        transform: rotateY(0);
+      }
+      .c1 .face {
+        background: linear-gradient(145deg, #fff, #fff0f4);
+        border: 1px solid var(--lrose);
+        color: var(--deep);
+      }
+      .c2 .face {
+        background: linear-gradient(145deg, #fff, #f2eaff);
+        border: 1px solid var(--lav);
+        color: var(--purple);
+      }
+      .c3 .face {
+        background: linear-gradient(145deg, #fff5f7, #ffe3eb);
+        border: 1px solid var(--rose);
+        color: var(--deep);
+      }
+      .card:hover .front {
+        box-shadow: 0 22px 45px rgba(121, 82, 168, 0.2);
+        transform: translateY(-5px);
+      }
+      .card.open:hover .front {
+        transform: rotateY(-180deg);
+      }
+      .prog {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .bar {
+        flex: 1;
+        max-width: 260px;
+        height: 7px;
+        background: #eee3f0;
+        border-radius: 9px;
+        overflow: hidden;
+      }
+      .bar i {
+        display: block;
+        height: 100%;
+        width: 0;
+        background: linear-gradient(90deg, var(--lav), var(--rose));
+        border-radius: 9px;
+        transition: width 0.55s ease;
+      }
+
+      /* POETRY */
+      .poetry {
+        background: linear-gradient(
+          135deg,
+          #f7effb 0%,
+          #fff7fa 52%,
+          #fff0f4 100%
+        );
+        overflow: hidden;
+      }
+      .poetry:before {
+        content: "“";
+        position: absolute;
+        top: 20px;
+        left: 7%;
+        font-family: Georgia, serif;
+        font-size: 15rem;
+        line-height: 1;
+        color: rgba(185, 155, 216, 0.16);
+        pointer-events: none;
+      }
+      .poetry .sec-head {
+        margin-inline: auto;
+        text-align: center;
+      }
+      .poetry .sec-head .eyebrow {
+        justify-content: center;
+      }
+      .poem-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+      .poem-card {
+        position: relative;
+        padding: 30px 26px;
+        border-radius: 23px;
+        background: rgba(255, 255, 255, 0.83);
+        border: 1px solid rgba(185, 155, 216, 0.38);
+        box-shadow: var(--shadow);
+        text-align: center;
+        overflow: hidden;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .poem-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 22px 48px rgba(121, 82, 168, 0.16);
+      }
+      .poem-card:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--rose), var(--lav));
+      }
+      .poem-mark {
+        color: var(--lrose);
+        font:
+          2.6rem Georgia,
+          serif;
+        line-height: 1;
+      }
+      .poem-lines {
+        font-family: "Amiri", serif;
+        font-size: clamp(1.35rem, 3vw, 1.75rem);
+        line-height: 2.05;
+        color: var(--deep);
+        margin: 8px 0 13px;
+      }
+      .poem-author {
+        color: var(--purple);
+        font-weight: 800;
+        font-size: 0.93rem;
+      }
+      .poem-context {
+        color: var(--muted);
+        font-size: 0.86rem;
+        margin-top: 8px;
+      }
+      .poetry-note {
+        margin: 25px auto 0;
+        max-width: 650px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      /* ACTIONS */
+      .actions {
+        background: linear-gradient(130deg, #fff0f4, #f7effb);
+      }
+      .tl {
+        list-style: none;
+        padding: 0;
+        position: relative;
+        display: grid;
+        gap: 18px;
+        max-width: 760px;
+      }
+      .tl:before {
+        content: "";
+        position: absolute;
+        inset-block: 12px;
+        inset-inline-start: 11px;
+        width: 2px;
+        background: linear-gradient(var(--rose), var(--lav));
+      }
+      .tl li {
+        position: relative;
+        padding-inline-start: 52px;
+      }
+      .tl li:before {
+        content: "";
+        position: absolute;
+        inset-inline-start: 2px;
+        top: 13px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: white;
+        border: 4px solid var(--rose);
+        box-shadow: 0 0 0 5px rgba(217, 75, 104, 0.08);
+      }
+      .tl li:nth-child(even):before {
+        border-color: var(--purple);
+        box-shadow: 0 0 0 5px rgba(121, 82, 168, 0.08);
+      }
+      .tl .box {
+        background: rgba(255, 255, 255, 0.88);
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        border-radius: 18px;
+        padding: 17px 22px;
+        box-shadow: var(--soft-shadow);
+        transition: transform 0.3s;
+      }
+      .tl .box:hover {
+        transform: translateX(-5px);
+      }
+      .tl .when {
+        color: var(--purple);
+        font-weight: 800;
+        font-size: 0.9rem;
+        margin-bottom: 3px;
+      }
+      .note {
+        margin-top: 26px;
+        color: var(--muted);
+        max-width: 42em;
+      }
+
+      /* LETTER */
+      .letter {
+        background:
+          radial-gradient(
+            ellipse at 50% 0,
+            rgba(185, 155, 216, 0.2),
+            transparent 45%
+          ),
+          linear-gradient(180deg, #f8effb, #fff7fa);
+        text-align: center;
+        overflow: hidden;
+      }
+      .letter .sec-head {
+        margin-inline: auto;
+      }
+      .env {
+        position: relative;
+        width: min(340px, 84vw);
+        height: 220px;
+        margin: 30px auto 0;
+        display: block;
+        filter: drop-shadow(0 18px 20px rgba(121, 82, 168, 0.15));
+        transition: transform 0.3s;
+      }
+      .env:hover {
+        transform: translateY(-5px);
+      }
+      .env > * {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+      .eback {
+        background: linear-gradient(135deg, #ffb7c7, #e78ba6);
+        border-radius: 12px;
+      }
+      .emini {
+        inset: 14px 18px;
+        background: white;
+        border-radius: 7px;
+        transition: transform 0.9s 0.35s cubic-bezier(0.3, 0.8, 0.3, 1);
+      }
+      .emini:after {
+        content: "";
+        position: absolute;
+        inset: 18px 22px auto;
+        height: 6px;
+        border-radius: 6px;
+        background: #f2e8f2;
+        box-shadow:
+          0 16px 0 #f2e8f2,
+          0 32px 0 #f2e8f2;
+      }
+      .efront {
+        background: linear-gradient(145deg, #ffe3eb, #ffd1de);
+        clip-path: polygon(0 0, 50% 58%, 100% 0, 100% 100%, 0 100%);
+        border-radius: 10px;
+      }
+      .eflap {
+        background: linear-gradient(120deg, var(--rose), var(--deep));
+        clip-path: polygon(0 0, 100% 0, 50% 62%);
+        transform-origin: top;
+        transition:
+          transform 0.65s,
+          z-index 0s 0.3s;
+        z-index: 3;
+        border-radius: 10px 10px 0 0;
+      }
+      .eseal {
+        inset: auto;
+        top: 40%;
+        left: 50%;
+        width: 45px;
+        height: 45px;
+        margin: -4px 0 0 -22px;
+        border-radius: 50%;
+        background: var(--deep);
+        color: white;
+        display: grid;
+        place-items: center;
+        z-index: 4;
+        transition: opacity 0.3s;
+        box-shadow: 0 5px 14px rgba(169, 46, 80, 0.25);
+      }
+      .env.open .eflap {
+        transform: rotateX(180deg);
+        z-index: 0;
+      }
+      .env.open .eseal {
+        opacity: 0;
+      }
+      .env.open .emini {
+        transform: translateY(-65px);
+      }
+      .env-hint {
+        margin-top: 18px;
+        color: var(--purple);
+        font-weight: 700;
+      }
+      .paper-wrap {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: grid-template-rows 0.9s 0.45s ease;
+      }
+      .paper-wrap > div {
+        overflow: hidden;
+      }
+      .paper-wrap.show {
+        grid-template-rows: 1fr;
+      }
+      .final {
+        margin: 35px auto 0;
+        max-width: 680px;
+        background: rgba(255, 255, 255, 0.94);
+        border-radius: 8px 8px 25px 25px;
+        padding: clamp(26px, 5vw, 48px);
+        text-align: start;
+        box-shadow: var(--shadow);
+        border-top: 6px solid transparent;
+        border-image: linear-gradient(90deg, var(--rose), var(--lav)) 1;
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          opacity 0.8s 0.85s,
+          transform 0.8s 0.85s;
+      }
+      .paper-wrap.show .final {
+        opacity: 1;
+        transform: none;
+      }
+      .final p {
+        margin-bottom: 16px;
+        font-size: 1.04rem;
+      }
+      .final .to2 {
+        color: var(--deep);
+        font-weight: 800;
+        font-size: 1.25rem;
+      }
+      .sign {
+        margin-top: 25px;
+        color: var(--purple);
+        font-weight: 800;
+      }
+
+      /* FOOTER */
+      footer {
+        position: relative;
+        overflow: hidden;
+        padding: 75px 0 30px;
+        text-align: center;
+        background:
+          radial-gradient(
+            ellipse at 50% 0,
+            rgba(185, 155, 216, 0.18),
+            transparent 60%
+          ),
+          linear-gradient(180deg, #fff8fa, #fff0f4);
+        border-top: 1px solid rgba(217, 75, 104, 0.13);
+      }
+      .footer-heart {
+        width: 65px;
+        height: 65px;
+        display: grid;
+        place-items: center;
+        margin: 0 auto 20px;
+        border-radius: 50%;
+        background: linear-gradient(145deg, #ffe3eb, #f2eaff);
+        color: var(--rose);
+        box-shadow: 0 10px 30px rgba(217, 75, 104, 0.12);
+        animation: heartbeat 2s infinite;
+      }
+      .footer-heart svg {
+        width: 27px;
+        height: 27px;
+      }
+      .footer-title {
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+        color: var(--deep);
+        font-weight: 800;
+      }
+      .footer-description {
+        color: var(--muted);
+        margin: 10px auto 23px;
+        max-width: 450px;
+      }
+      .footer-sign {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        padding: 12px 23px;
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid rgba(217, 75, 104, 0.18);
+        border-radius: 50px;
+        color: var(--deep);
+        box-shadow: var(--soft-shadow);
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      .footer-sign:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 14px 30px rgba(217, 75, 104, 0.16);
+      }
+      .footer-sign .divider {
+        width: 1px;
+        height: 23px;
+        background: var(--lrose);
+      }
+      .footer-bottom {
+        margin-top: 48px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(121, 82, 168, 0.12);
+        color: #a58abf;
+        font-size: 0.82rem;
+      }
+      .footer-bottom span {
+        color: var(--deep);
+        font-weight: 800;
+      }
+      .footer-secret {
+        display: none;
+        max-width: 530px;
+        margin: 25px auto 0;
+        padding: 22px;
+        background: white;
+        border-radius: 20px;
+        border: 1px solid var(--lrose);
+        box-shadow: var(--shadow);
+        animation: rise 0.6s both;
+      }
+      .footer-secret.show {
+        display: block;
+      }
+      .footer-secret h3 {
+        color: var(--deep);
+        margin-bottom: 8px;
+      }
+      .footer-secret p {
+        color: var(--muted);
+      }
+
+      /* CONTROLS */
+      .tools {
+        position: fixed;
+        inset-block-end: max(16px, env(safe-area-inset-bottom));
+        inset-inline-start: 16px;
+        display: flex;
+        gap: 9px;
+        z-index: 50;
+        align-items: center;
+      }
+      .tool {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(14px);
+        color: var(--deep);
+        font-size: 0.84rem;
+        font-weight: 800;
+        padding: 10px 15px;
+        min-height: 44px;
+        border-radius: 999px;
+        box-shadow: 0 7px 24px rgba(48, 36, 59, 0.12);
+        border: 1px solid rgba(255, 183, 199, 0.8);
+        transition:
+          transform 0.2s,
+          background 0.2s;
+      }
+      .tool:hover {
+        transform: translateY(-2px);
+        background: #fff;
+      }
+      .tool[aria-pressed="true"] {
+        background: linear-gradient(120deg, var(--purple), #9876bd);
+        color: white;
+        border-color: transparent;
+      }
+      .nav-tools {
+        position: fixed;
+        inset-block-end: max(16px, env(safe-area-inset-bottom));
+        inset-inline-end: 16px;
+        display: grid;
+        gap: 8px;
+        z-index: 50;
+      }
+      .nav-btn {
+        width: 44px;
+        height: 44px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(185, 155, 216, 0.55);
+        color: var(--purple);
+        box-shadow: 0 7px 22px rgba(48, 36, 59, 0.11);
+        transition: transform 0.2s;
+      }
+      .nav-btn:hover {
+        transform: translateY(-3px);
+        background: white;
+      }
+      .nav-btn svg {
+        width: 19px;
+        height: 19px;
+      }
+      .toast {
+        position: fixed;
+        inset-inline: 0;
+        bottom: 78px;
+        margin: auto;
+        width: max-content;
+        max-width: 90vw;
+        background: var(--ink);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 999px;
+        font-size: 0.9rem;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: 0.35s;
+        pointer-events: none;
+        z-index: 60;
+      }
+      .toast.on {
+        opacity: 1;
+        transform: none;
+      }
+      dialog {
+        border: 0;
+        border-radius: 26px;
+        padding: 36px 30px;
+        max-width: min(440px, 90vw);
+        margin: auto;
+        background: white;
+        color: var(--ink);
+        text-align: center;
+        box-shadow: 0 30px 70px rgba(121, 82, 168, 0.3);
+      }
+      dialog::backdrop {
+        background: rgba(48, 36, 59, 0.42);
+        backdrop-filter: blur(5px);
+      }
+      dialog h3 {
+        color: var(--deep);
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+      }
+      dialog p {
+        color: var(--muted);
+        margin-bottom: 22px;
+      }
+      #confetti {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 40;
+      }
+      .rv {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.8s,
+          transform 0.8s;
+      }
+      .rv.in {
+        opacity: 1;
+        transform: none;
+      }
+      .nojs .rv {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* ANIMATIONS */
+      @keyframes draw {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes pop {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(25px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-22px);
+        }
+      }
+      @keyframes paperFloat {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0);
+        }
+        50% {
+          transform: translateY(-10px) rotate(1deg);
+        }
+      }
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        15% {
+          transform: scale(1.1);
+        }
+        30% {
+          transform: scale(1);
+        }
+        45% {
+          transform: scale(1.06);
+        }
+      }
+      @keyframes hookPulse {
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(217, 75, 104, 0);
+        }
+        50% {
+          box-shadow: 0 0 0 7px rgba(217, 75, 104, 0.06);
+        }
+      }
+      @keyframes scrollLine {
+        0% {
+          transform: scaleY(0.3);
+          transform-origin: top;
+          opacity: 0.4;
+        }
+        50% {
+          transform: scaleY(1);
+          transform-origin: top;
+          opacity: 1;
+        }
+        100% {
+          transform: scaleY(0.3);
+          transform-origin: bottom;
+          opacity: 0.4;
+        }
+      }
+
+      @media (max-width: 850px) {
+        .hero {
+          min-height: auto;
+          padding: 75px 0 90px;
+        }
+        .hero .wrap {
+          grid-template-columns: 1fr;
+          gap: 22px;
+          text-align: center;
+        }
+        .hero-copy {
+          order: 2;
+        }
+        .visual {
+          order: 1;
+        }
+        .paper {
+          max-width: 275px;
+        }
+        .hero p.lead {
+          margin-inline: auto;
+        }
+        .hero-actions {
+          justify-content: center;
+        }
+        .hero .tag {
+          margin-top: 14px;
+        }
+        .apology .wrap {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+        .apology .sec-head {
+          position: static;
+        }
+        .grid3 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        .grid3 .card:last-child {
+          grid-column: 1/-1;
+          max-width: calc(50% - 10px);
+          width: 100%;
+          justify-self: center;
+        }
+      }
+      @media (max-width: 560px) {
+        body {
+          font-size: 15px;
+        }
+        .wrap {
+          width: calc(100% - 34px);
+        }
+        section {
+          padding: 62px 0;
+        }
+        .hero {
+          padding: 54px 0 78px;
+        }
+        .hero h1 {
+          font-size: clamp(2.25rem, 11vw, 3.1rem);
+        }
+        .paper {
+          max-width: 220px;
+        }
+        .hero p.lead {
+          font-size: 1rem;
+          margin: 16px auto 24px;
+        }
+        .hero-actions {
+          display: grid;
+          grid-template-columns: 1fr;
+          max-width: 270px;
+          margin-inline: auto;
+        }
+        .btn {
+          width: 100%;
+          min-height: 48px;
+        }
+        .scroll-cue {
+          bottom: 13px;
+        }
+        .sec-head {
+          margin-bottom: 28px;
+        }
+        .paras {
+          gap: 13px;
+        }
+        .paras p {
+          padding: 16px;
+          border-radius: 15px;
+        }
+        .grid3 {
+          grid-template-columns: 1fr;
+          gap: 15px;
+        }
+        .grid3 .card:last-child {
+          grid-column: auto;
+          max-width: none;
+        }
+        .card {
+          height: 250px;
+        }
+        .face {
+          padding: 22px;
+        }
+        .prog {
+          gap: 10px;
+          font-size: 0.82rem;
+        }
+        .tl {
+          gap: 15px;
+        }
+        .tl li {
+          padding-inline-start: 40px;
+        }
+        .tl .box {
+          padding: 15px 16px;
+        }
+        .poem-grid {
+          grid-template-columns: 1fr;
+        }
+        .poem-card {
+          padding: 25px 18px;
+        }
+        .env {
+          height: 190px;
+          width: min(310px, 84vw);
+        }
+        .final {
+          margin-top: 25px;
+          padding: 25px 20px;
+        }
+        .final p {
+          font-size: 0.98rem;
+        }
+        .tools {
+          inset-inline-start: 10px;
+          inset-block-end: max(10px, env(safe-area-inset-bottom));
+          gap: 6px;
+        }
+        .tool {
+          padding: 9px 11px;
+          min-height: 42px;
+          font-size: 0.76rem;
+        }
+        .nav-tools {
+          inset-inline-end: 10px;
+          inset-block-end: max(10px, env(safe-area-inset-bottom));
+          gap: 6px;
+        }
+        .nav-btn {
+          width: 42px;
+          height: 42px;
+        }
+        footer {
+          padding-bottom: 100px;
+        }
+        .footer-sign {
+          font-size: 0.9rem;
+          padding: 11px 17px;
+        }
+      }
+      @media (max-width: 360px) {
+        .tool {
+          padding: 8px 9px;
+          font-size: 0.72rem;
+        }
+        .tools {
+          gap: 5px;
+        }
+        .nav-btn {
+          width: 39px;
+          height: 39px;
+        }
+        .card {
+          height: 265px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *:before,
+        *:after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          animation-delay: 0s !important;
+          transition-duration: 0.01ms !important;
+          transition-delay: 0s !important;
+        }
+        .paper .ln {
+          stroke-dashoffset: 0;
+        }
+        .rv {
+          opacity: 1;
+          transform: none;
+        }
+        .card .face {
+          transition: opacity 0.2s;
+        }
+        .card.open .front {
+          transform: none;
+          opacity: 0;
+          visibility: hidden;
+        }
+        .back {
+          transform: none;
+          opacity: 0;
+          visibility: hidden;
+        }
+        .card.open .back {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="nojs">
+    <main>
+      <!-- HERO -->
+      <header class="hero" id="top">
+        <div class="wrap">
+          <div class="hero-copy">
+            <div class="hook">
+              <span class="hook-dot"></span>مريم، فيه كلام كان لازم أقوله من
+              زمان...
+            </div>
+            <p class="to">إلى <span data-to>مريم</span></p>
+            <h1>أنا آسف…<br /><span>لأنك تستاهلي أحسن من كده.</span></h1>
+            <p class="lead">
+              أنا عارف إن كلامي خلاكي تحسي إنك مش مهمة، وده شيء يوجعني إني كنت
+              سبب فيه. مش داخل أبرر ولا أقلل من زعلك؛ داخل أقولك إني غلطت، وإن
+              مكانتك عندي أكبر بكتير من اللي وصّله كلامي.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#apology"
+                >اقرئي اعتذاري <span class="en">Read on</span></a
+              >
+              <a class="btn ghost" href="#letter">رسالة من قلبي</a>
+            </div>
+            <span class="tag en">You matter. More than my words showed.</span>
+          </div>
+          <div class="visual" aria-hidden="true">
+            <svg class="paper" viewBox="0 0 320 360" fill="none">
+              <rect
+                x="52"
+                y="44"
+                width="216"
+                height="270"
+                rx="10"
+                fill="#F3EAFF"
+                transform="rotate(-7 160 180)"
+              />
+              <rect
+                x="46"
+                y="36"
+                width="216"
+                height="270"
+                rx="10"
+                fill="#FFE3EB"
+                transform="rotate(4 160 180)"
+              />
+              <rect
+                x="52"
+                y="30"
+                width="216"
+                height="270"
+                rx="10"
+                fill="#FFFFFF"
+                stroke="#FFB7C7"
+                stroke-width="2"
+              />
+              <path
+                class="ln"
+                d="M84 86h120"
+                stroke="#B99BD8"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <path
+                class="ln"
+                d="M84 124h152"
+                stroke="#FFB7C7"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <path
+                class="ln"
+                d="M84 158h140"
+                stroke="#FFB7C7"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <path
+                class="ln"
+                d="M84 192h96"
+                stroke="#B99BD8"
+                stroke-width="5"
+                stroke-linecap="round"
+              />
+              <g class="seal">
+                <circle cx="212" cy="262" r="30" fill="#D94B68" />
+                <path
+                  d="M212 277c-14-9-19-16-19-23a9 9 0 0 1 19-3 9 9 0 0 1 19 3c0 7-5 14-19 23z"
+                  fill="#fff"
+                />
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">
+          <span>كمّلي براحتك</span><i></i>
+        </div>
+      </header>
+
+      <!-- APOLOGY -->
+      <section class="apology" id="apology">
+        <div class="wrap">
+          <div class="sec-head rv">
+            <span class="eyebrow">أولًا، اعتذار واضح</span>
+            <h2>أنا فاهم أنا زعلتك في إيه</h2>
+            <p class="en">No excuses. Just taking responsibility.</p>
+          </div>
+          <div class="paras">
+            <p class="rv">
+              <b>أنا غلطت في كلامي.</b> قلت كلام وصّلك إحساس إنك مش مهمة، وده مش
+              بس كلام ضايقك؛ ده خلاكي تشكي في مكانتك عندي. أنا آسف إني كنت سبب
+              في الإحساس ده.
+            </p>
+            <p class="rv">
+              <b>إنتِ مش قليلة ولا وجودك عادي.</b> بالعكس، وجودك له قيمة، وكلامك
+              ورأيك وزعلك كلهم مهمين. لو تصرفي قال عكس كده، فالمشكلة في تصرفي
+              أنا، مش في قيمتك أبدًا.
+            </p>
+            <p class="rv">
+              <b>مش هبرر اللي حصل.</b> ممكن أكون اتعصبت أو ما فكرتش قبل ما
+              أتكلم، لكن ده مش عذر. كان المفروض أختار كلامي وأراعي مشاعرك،
+              خصوصًا إنك غالية عندي.
+            </p>
+            <p class="rv">
+              <b>أنا مقدّر زعلك.</b> مش من حقي أقولك إنك مكبرة الموضوع أو تطلبي
+              من نفسك تنسي بسرعة. من حقك تتضايقي، ومن حقي أنا أعترف إني جرحتك
+              وأحاول أصلح ده.
+            </p>
+            <p class="rv">
+              <b>آسف من قلبي يا مريم.</b> مش بعتذر بس عشان نرجع نتكلم؛ بعتذر
+              لأني ما كنتش الشخص اللي المفروض أكونه في اللحظة دي، ولأني خليتك
+              تحسي بعكس اللي جوايا.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARDS -->
+      <section class="cards" id="cards">
+        <div class="wrap">
+          <div class="sec-head rv">
+            <span class="eyebrow">حاجات لازم تعرفيها</span>
+            <h2>تلات رسايل ليكي</h2>
+            <p>كل كارت فيه معنى يمكن كلامي ما عرفش يوصله. افتحيهم براحتك.</p>
+          </div>
+          <div class="grid3 rv">
+            <button class="card c1" aria-pressed="false">
+              <span class="face front"
+                ><span
+                  ><span class="en">Your place</span>
+                  <h3>مكانتك عندي</h3></span
+                ><span class="hint">اضغطي عشان تفتحي الرسالة</span></span
+              >
+              <span class="face back"
+                >إنتِ مش شخص عابر في حياتي، ولا وجودك حاجة عادية أقدر أتعامل
+                معاها باستهانة. ليكي مكانة وتقدير، حتى لو أنا فشلت أوضح ده
+                بالطريقة الصح.</span
+              >
+            </button>
+            <button class="card c2" aria-pressed="false">
+              <span class="face front"
+                ><span
+                  ><span class="en">What I appreciate</span>
+                  <h3>إيه اللي بقدّره فيكي؟</h3></span
+                ><span class="hint">اضغطي عشان تفتحي الرسالة</span></span
+              >
+              <span class="face back"
+                >بقدّر وجودك، وطريقتك، وكلامك، والتفاصيل الصغيرة اللي يمكن ما
+                بقولش إني واخد بالي منها. وبقدّر إن ليكي رأي ومشاعر لازم أسمعها
+                وأحترمها.</span
+              >
+            </button>
+            <button class="card c3" aria-pressed="false">
+              <span class="face front"
+                ><span
+                  ><span class="en">My promise</span>
+                  <h3>وعد مني</h3></span
+                ><span class="hint">اضغطي عشان تفتحي الرسالة</span></span
+              >
+              <span class="face back"
+                >مش هوعدك إني عمري ما أغلط، لكن أوعدك إني أحاول ما أكررّش نفس
+                الغلط: أفكر قبل ما أتكلم، وأسمعك، وما استخدمش كلام يقلل منك أو
+                من إحساسك.</span
+              >
+            </button>
+          </div>
+          <div class="prog" role="status" aria-live="polite">
+            <div class="bar"><i id="bar"></i></div>
+            <span id="count">فتحتي ٠ من ٣</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- POETRY -->
+<section class="poetry" id="poetry">
+ <div class="wrap">
+  <div class="sec-head rv">
+   <span class="eyebrow">بين الاعتذار والتقدير</span>
+   <h2>وللشعر أحيانًا ما لا تقوله الرسائل</h2>
+   <p>اخترت أبياتًا من الشعر العربي تعبّر عن غلاوتك عندي، وعن اعتذاري ليكي.</p>
+  </div>
+
+  <div class="poem-grid">
+   <article class="poem-card rv">
+    <div class="poem-mark">“</div>
+    <p class="poem-lines">
+     يا مَنْ يَعِزُّ علينا أن نفارقهمُ<br>
+     وِجدانُنا كلُّ شيءٍ بعدكم عدمُ
+    </p>
+    <div class="poem-author">المتنبي</div>
+    <p class="poem-context">
+     من قصيدة «واحر قلباه ممن قلبه شبم» — للتعبير عن الغلاوة والمكانة.
+    </p>
+   </article>
+
+   <article class="poem-card rv">
+    <div class="poem-mark">“</div>
+    <p class="poem-lines">
+     أترى يقبل عذري<br>
+     إذ أنا جئتُ سائلاً
+    </p>
+    <div class="poem-author">بهاء الدين زهير</div>
+    <p class="poem-context">
+     كلمات تعبّر عن الرجاء في قبول العذر بعد الخطأ.
+    </p>
+   </article>
+  </div>
+
+  <p class="poetry-note rv">
+   يا مريم، الشعر يقدر يعبّر عن اللي جوانا، لكن الأهم عندي إن اعتذاري يبان في احترامي ليكي وفي تصرفاتي بعد كده.
+  </p>
+ </div>
+</section>
+
+      <!-- ACTION PLAN -->
+      <section class="actions" id="actions">
+        <div class="wrap">
+          <div class="sec-head rv">
+            <span class="eyebrow">مش مجرد كلام</span>
+            <h2>إزاي هحاول أصلّح اللي حصل؟</h2>
+            <p class="en">Words matter. Consistent actions matter more.</p>
+          </div>
+          <ol class="tl">
+            <li class="rv">
+              <div class="box">
+                <div class="when">من دلوقتي</div>
+                هفكر قبل ما أتكلم، ومش هسمح للانفعال إنه يخليني أقول كلام يجرحك.
+              </div>
+            </li>
+            <li class="rv">
+              <div class="box">
+                <div class="when">وقت أي خلاف</div>
+                هسمعك للآخر، وهحاول أفهم إحساسك بدل ما أنشغل بالدفاع عن نفسي.
+              </div>
+            </li>
+            <li class="rv">
+              <div class="box">
+                <div class="when">في تعاملي معاكي</div>
+                هراعي كلامي، وأحترم رأيك ومشاعرك، ومش هقلل من أي حاجة مضايقاكي.
+              </div>
+            </li>
+            <li class="rv">
+              <div class="box">
+                <div class="when">لو غلطت تاني</div>
+                هعترف بغلطتي وأصلحها، بدل ما أبررها أو أكررها وكأن مفيش حاجة
+                حصلت.
+              </div>
+            </li>
+          </ol>
+          <p class="note rv">
+            مش هطلب منك تصدقي وعود لمجرد إنها مكتوبة هنا. خدي وقتك، وسيبي أفعالي
+            هي اللي تثبت إذا كنت اتعلمت من الموقف فعلًا.
+          </p>
+        </div>
+      </section>
+
+      <!-- FINAL LETTER -->
+      <section class="letter" id="letter">
+        <div class="wrap">
+          <div class="sec-head rv">
+            <span class="eyebrow">آخر كلام في الرسالة</span>
+            <h2>رسالة من السيد إلى مريم</h2>
+            <p class="en">A few words, from the heart.</p>
+          </div>
+          <button
+            class="env rv"
+            id="env"
+            aria-expanded="false"
+            aria-controls="final"
+            aria-label="افتحي الظرف"
+          >
+            <span class="eback"></span><span class="emini"></span
+            ><span class="efront"></span><span class="eflap"></span>
+            <span class="eseal" aria-hidden="true"
+              ><svg width="20" height="20" viewBox="0 0 24 24" fill="#fff">
+                <path
+                  d="M12 21C-2 12 2 3 8 3c2 0 3.4 1 4 2.4C12.6 4 14 3 16 3c6 0 10 9-4 18z"
+                /></svg
+            ></span>
+          </button>
+          <p class="env-hint" id="hint">اضغطي على الظرف لفتح الرسالة</p>
+          <div class="paper-wrap" id="paperWrap">
+            <div>
+              <article
+                class="final"
+                id="final"
+                aria-live="polite"
+                aria-hidden="true"
+              >
+                <p class="to2">إلى مريم،</p>
+                <p>
+                  يمكن دي مش أول مرة أقولك فيها إنك غالية، لكن يمكن دي أول مرة
+                  أحاول أوضحلك قد إيه أنا آسف إني خليتك تحسي بعكس الحقيقة دي.
+                </p>
+                <p>
+                  أنا عارف إن كلامي كان مؤذي، وإنه وصّلك إحساس إنك مش مهمة أو إن
+                  وجودك مش فارق. وعايزك تعرفي إن ده مش حقيقي، وإن الغلط كان في
+                  كلامي وتصرفي، مش فيكي ولا في قيمتك.
+                </p>
+                <p>
+                  إنتِ تستاهلي يتسمع كلامك، ويتحترم زعلك، ويتاخد إحساسك بجدية.
+                  وتستاهلي معاملة تليق بمكانتك، مش مجرد كلام حلو وقت ما يحصل
+                  خلاف.
+                </p>
+                <p>
+                  مش هطلب منك تنسي اللي حصل، ولا تسامحيني بسرعة، ولا تتصرفي كأن
+                  مفيش حاجة. لو محتاجة وقت، خديه براحتك. أنا بس كان لازم أعتذر
+                  بوضوح وأقولك إنك غالية عندي، وإنّي ندمان إني خليتك تشكي في ده.
+                </p>
+                <p>
+                  أتمنى أقدر أصلح اللي اتكسر بتصرفاتي، مش برسالة واحدة. وأتمنى
+                  لما تفتكري الموقف ده بعدين، تلاقي إنّي اتعلمت فعلًا وبقيت
+                  أراعي كلامي ومشاعرك أكتر.
+                </p>
+                <p>
+                  شكرًا إنك قريتي لحد هنا. أتمنى لك دايمًا راحة وفرحة وكل حاجة
+                  حلوة تستاهليها.
+                </p>
+                <p class="sign">
+                  بكل صدق واعتذار،<br />السيد
+                  <span class="en">· sincerely</span>
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="wrap">
+        <div class="footer-heart" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 21C-2 12 2 3 8 3c2 0 3.4 1 4 2.4C12.6 4 14 3 16 3c6 0 10 9-4 18z"
+            />
+          </svg>
+        </div>
+        <h2 class="footer-title">إنتِ غالية، حتى لو كلامي ما عرفش يثبت ده.</h2>
+        <p class="footer-description">
+          أنا آسف إني خليتك تحسي إنك مش مهمة. الحقيقة إن ليكي مكانة وتقدير، وكان
+          لازم أعبّر عن ده باحترام أكبر.
+        </p>
+        <button
+          class="footer-sign"
+          id="footerSecret"
+          aria-label="اضغطي خمس مرات لرسالة سرية"
+        >
+          <span>من السيد</span><span class="divider"></span><span>إلى مريم</span
+          ><span>♡</span>
+        </button>
+        <div class="footer-secret" id="footerSecretMessage" aria-hidden="true">
+          <h3>مريم، فيه حاجة عايزك تفتكريها...</h3>
+          <p>
+            ما تخليش كلامي في لحظة غلط يخليكي تشوفي نفسك أقل من حقيقتك. إنتِ
+            ليكي قيمة، ومشاعرك مهمة، وتستاهلي التقدير والاحترام. أنا آسف إني ما
+            بينتش ده وقتها.
+          </p>
+          <p style="margin-top: 12px; color: var(--rose); font-weight: 800">
+            — السيد، بصدق.
+          </p>
+        </div>
+        <div class="footer-bottom">
+          <p>Made with sincerity · <span>Elsayd</span> © 2026</p>
+          <p class="en" style="margin-top: 5px">
+            You deserve kindness, respect, and honesty.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FLOATING CONTROLS -->
+    <div class="tools">
+      <button
+        class="tool"
+        id="sound"
+        aria-pressed="false"
+        aria-label="تشغيل الصوت"
+      >
+        ♫ <span>الصوت: مقفول</span>
+      </button>
+      <button class="tool" id="reset">↺ <span>إعادة</span></button>
+    </div>
+    <div class="nav-tools">
+      <button
+        class="nav-btn"
+        id="backBtn"
+        aria-label="القسم السابق"
+        title="القسم السابق"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m15 18-6-6 6-6" />
+        </svg>
+      </button>
+      <button class="nav-btn" id="topBtn" aria-label="للأعلى" title="للأعلى">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="m18 15-6-6-6 6" />
+        </svg>
+      </button>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <canvas id="confetti" aria-hidden="true"></canvas>
+
+    <dialog id="dlg" aria-labelledby="dt">
+      <h3 id="dt">رسالة صغيرة ليكي 🤍</h3>
+      <p>
+        شكرًا إنك وصلتي لهنا وقرأتي الكلام للنهاية. أتمنى تكون الرسالة وضحتلك قد
+        إيه أنا آسف، وقد إيه مكانتك مهمة عندي.
+      </p>
+      <button class="btn" id="dclose">تمام</button>
+    </dialog>
+
+    <audio
+      id="backgroundMusic"
+      src="Yiruma_-_River_Flows_On_You_(mp3.pm).mp3"
+      preload="auto"
+      loop
+      playsinline
+    ></audio>
+
+    <script>
+      (() => {
+        "use strict";
+        const $ = (s) => document.querySelector(s);
+        const $$ = (s) => [...document.querySelectorAll(s)];
+        const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+        document.body.classList.remove("nojs");
+        let toastTimer;
+        function toast(msg) {
+          const t = $("#toast");
+          t.textContent = msg;
+          t.classList.add("on");
+          clearTimeout(toastTimer);
+          toastTimer = setTimeout(() => t.classList.remove("on"), 2400);
+        }
+
+        // LOCAL BACKGROUND MUSIC + OPTIONAL UI CHIMES
+        const backgroundMusic = $("#backgroundMusic");
+        const soundBtn = $("#sound");
+        let soundOn = false,
+          audioContext = null;
+        backgroundMusic.volume = 0.32;
+
+        function updateSoundButton() {
+          soundBtn.setAttribute("aria-pressed", String(soundOn));
+          soundBtn.setAttribute(
+            "aria-label",
+            soundOn ? "إيقاف الموسيقى" : "تشغيل الموسيقى",
+          );
+          soundBtn.innerHTML = `♫ <span>الموسيقى: ${soundOn ? "شغالة" : "مقفولة"}</span>`;
+        }
+
+        async function startMusic() {
+          try {
+            await backgroundMusic.play();
+            soundOn = true;
+            updateSoundButton();
+            return true;
+          } catch (error) {
+            soundOn = false;
+            updateSoundButton();
+            return false;
+          }
+        }
+
+        function stopMusic() {
+          backgroundMusic.pause();
+          soundOn = false;
+          updateSoundButton();
+        }
+
+        // Try autoplay when the page loads. Browsers may require a user gesture.
+        startMusic();
+
+        // If autoplay is blocked, retry after the visitor's first interaction.
+        document.addEventListener(
+          "pointerdown",
+          (event) => {
+            if (event.target.closest("#sound")) return;
+            if (backgroundMusic.paused) startMusic();
+          },
+          { once: true },
+        );
+        document.addEventListener(
+          "keydown",
+          () => {
+            if (backgroundMusic.paused) startMusic();
+          },
+          { once: true },
+        );
+
+        backgroundMusic.addEventListener("play", () => {
+          soundOn = true;
+          updateSoundButton();
+        });
+        backgroundMusic.addEventListener("pause", () => {
+          soundOn = false;
+          updateSoundButton();
+        });
+
+        soundBtn.addEventListener("click", async () => {
+          if (backgroundMusic.paused) {
+            const started = await startMusic();
+            if (started) {
+              chime(659);
+              toast("بدأت الموسيقى الهادئة");
+            } else toast("اضغطي مرة أخرى لتشغيل الموسيقى");
+          } else {
+            stopMusic();
+            toast("تم إيقاف الموسيقى");
+          }
+        });
+
+        function chime(freq = 523) {
+          if (!soundOn) return;
+          try {
+            audioContext =
+              audioContext ||
+              new (window.AudioContext || window.webkitAudioContext)();
+            if (audioContext.state === "suspended") audioContext.resume();
+            const osc = audioContext.createOscillator(),
+              gain = audioContext.createGain();
+            osc.type = "sine";
+            osc.frequency.value = freq;
+            gain.gain.setValueAtTime(0.0001, audioContext.currentTime);
+            gain.gain.exponentialRampToValueAtTime(
+              0.025,
+              audioContext.currentTime + 0.035,
+            );
+            gain.gain.exponentialRampToValueAtTime(
+              0.0001,
+              audioContext.currentTime + 0.4,
+            );
+            osc.connect(gain).connect(audioContext.destination);
+            osc.start();
+            osc.stop(audioContext.currentTime + 0.42);
+          } catch (e) {}
+        }
+        updateSoundButton();
+
+        // SCROLL REVEAL
+        if ("IntersectionObserver" in window) {
+          const io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("in");
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -25px 0px" },
+          );
+          $$(".rv").forEach((el) => io.observe(el));
+        } else $$(".rv").forEach((el) => el.classList.add("in"));
+
+        // CARDS
+        const opened = new Set(),
+          cards = $$(".card"),
+          notes = [392, 440, 523];
+        function updateProgress() {
+          $("#bar").style.width = (opened.size / 3) * 100 + "%";
+          const numbers = ["٠", "١", "٢", "٣"];
+          $("#count").textContent =
+            opened.size === 3
+              ? "فتحتي الرسايل التلاتة. شكرًا على وقتك."
+              : `فتحتي ${numbers[opened.size]} من ٣`;
+        }
+        cards.forEach((card, i) => {
+          card.addEventListener("click", () => {
+            const isOpen = card.classList.toggle("open");
+            card.setAttribute("aria-pressed", String(isOpen));
+            if (isOpen) {
+              opened.add(i);
+              chime(notes[i]);
+            } else opened.delete(i);
+            updateProgress();
+            if (opened.size === 3 && isOpen)
+              toast("فيه أبيات شعر ورسالة أخيرة تحت 🤍");
+          });
+        });
+
+        // CONFETTI
+        const canvas = $("#confetti"),
+          ctx = canvas.getContext("2d");
+        const palette = ["#D94B68", "#FFB7C7", "#7952A8", "#B99BD8", "#FFE3EB"];
+        function confetti() {
+          if (reduce) return;
+          const dpr = Math.min(devicePixelRatio || 1, 2);
+          canvas.width = innerWidth * dpr;
+          canvas.height = innerHeight * dpr;
+          canvas.style.width = innerWidth + "px";
+          canvas.style.height = innerHeight + "px";
+          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+          const particles = Array.from({ length: 100 }, () => ({
+            x: innerWidth / 2 + (Math.random() - 0.5) * 180,
+            y: innerHeight * 0.58,
+            vx: (Math.random() - 0.5) * 10,
+            vy: -Math.random() * 13 - 3,
+            size: Math.random() * 7 + 3,
+            rot: Math.random() * 6,
+            spin: (Math.random() - 0.5) * 0.25,
+            color: palette[Math.floor(Math.random() * palette.length)],
+          }));
+          let frame = 0;
+          (function animate() {
+            ctx.clearRect(0, 0, innerWidth, innerHeight);
+            particles.forEach((p) => {
+              p.vy += 0.25;
+              p.x += p.vx;
+              p.y += p.vy;
+              p.rot += p.spin;
+              ctx.save();
+              ctx.translate(p.x, p.y);
+              ctx.rotate(p.rot);
+              ctx.fillStyle = p.color;
+              ctx.fillRect(-p.size / 2, -p.size / 4, p.size, p.size / 2);
+              ctx.restore();
+            });
+            if (++frame < 125) requestAnimationFrame(animate);
+            else ctx.clearRect(0, 0, innerWidth, innerHeight);
+          })();
+        }
+
+        // ENVELOPE
+        const env = $("#env"),
+          paperWrap = $("#paperWrap"),
+          finalLetter = $("#final");
+        env.addEventListener("click", () => {
+          if (env.classList.contains("open")) return;
+          env.classList.add("open");
+          env.setAttribute("aria-expanded", "true");
+          env.setAttribute("aria-label", "الظرف مفتوح");
+          paperWrap.classList.add("show");
+          finalLetter.setAttribute("aria-hidden", "false");
+          $("#hint").textContent =
+            "الرسالة ليكي يا مريم، خدي وقتك في قراءتها 🤍";
+          chime(523);
+          setTimeout(() => chime(784), 240);
+          setTimeout(() => {
+            confetti();
+            paperWrap.scrollIntoView({
+              behavior: reduce ? "auto" : "smooth",
+              block: "center",
+            });
+          }, 950);
+        });
+
+        // FOOTER SECRET
+        const secretBtn = $("#footerSecret"),
+          secretMessage = $("#footerSecretMessage");
+        let secretClicks = 0,
+          secretTimer;
+        secretBtn.addEventListener("click", () => {
+          secretClicks++;
+          clearTimeout(secretTimer);
+          secretTimer = setTimeout(() => {
+            secretClicks = 0;
+          }, 2200);
+          chime(523);
+          if (secretClicks >= 5) {
+            secretClicks = 0;
+            secretMessage.classList.add("show");
+            secretMessage.setAttribute("aria-hidden", "false");
+            toast("لقيتي رسالة صغيرة مخفية 🤍");
+            secretMessage.scrollIntoView({
+              behavior: reduce ? "auto" : "smooth",
+              block: "center",
+            });
+            confetti();
+          } else toast(`باقي ${5 - secretClicks} ضغطات لاكتشاف المفاجأة`);
+        });
+
+        // DIALOG
+        const dlg = $("#dlg");
+        $("#dclose").addEventListener("click", () => dlg.close());
+        dlg.addEventListener("click", (e) => {
+          if (e.target === dlg) dlg.close();
+        });
+
+        // SECTION NAVIGATION
+        const sections = $$("main > header, main > section");
+        function visibleSectionIndex() {
+          let best = 0,
+            bestDistance = Infinity;
+          sections.forEach((s, i) => {
+            const rect = s.getBoundingClientRect(),
+              distance = Math.abs(rect.top - 90);
+            if (rect.top < innerHeight * 0.72 && distance < bestDistance) {
+              best = i;
+              bestDistance = distance;
+            }
+          });
+          return best;
+        }
+        $("#backBtn").addEventListener("click", () => {
+          const current = visibleSectionIndex(),
+            target = Math.max(0, current - 1);
+          sections[target].scrollIntoView({
+            behavior: reduce ? "auto" : "smooth",
+            block: "start",
+          });
+          chime(440);
+        });
+        $("#topBtn").addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+          chime(523);
+        });
+
+        // RESET
+        $("#reset").addEventListener("click", () => {
+          cards.forEach((c) => {
+            c.classList.remove("open");
+            c.setAttribute("aria-pressed", "false");
+          });
+          opened.clear();
+          updateProgress();
+          env.classList.remove("open");
+          env.setAttribute("aria-expanded", "false");
+          env.setAttribute("aria-label", "افتحي الظرف");
+          paperWrap.classList.remove("show");
+          finalLetter.setAttribute("aria-hidden", "true");
+          $("#hint").textContent = "اضغطي على الظرف لفتح الرسالة";
+          secretMessage.classList.remove("show");
+          secretMessage.setAttribute("aria-hidden", "true");
+          secretClicks = 0;
+          window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+          toast("رجعنا لأول الرسالة");
+          chime(392);
+        });
+        updateProgress();
+      })();
+    </script>
+  </body>
+</html>

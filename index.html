@@ -1788,109 +1788,95 @@
           toastTimer = setTimeout(() => t.classList.remove("on"), 2400);
         }
 
-        // LOCAL BACKGROUND MUSIC + OPTIONAL UI CHIMES
-        const backgroundMusic = $("#backgroundMusic");
-        const soundBtn = $("#sound");
-        let soundOn = false,
-          audioContext = null;
-        backgroundMusic.volume = 0.32;
+       
+// AUTO BACKGROUND MUSIC
+const backgroundMusic = $("#backgroundMusic");
+const soundBtn = $("#sound");
 
-        function updateSoundButton() {
-          soundBtn.setAttribute("aria-pressed", String(soundOn));
-          soundBtn.setAttribute(
-            "aria-label",
-            soundOn ? "إيقاف الموسيقى" : "تشغيل الموسيقى",
-          );
-          soundBtn.innerHTML = `♫ <span>الموسيقى: ${soundOn ? "شغالة" : "مقفولة"}</span>`;
-        }
+let soundOn = false;
+let audioContext = null;
 
-        async function startMusic() {
-          try {
-            await backgroundMusic.play();
-            soundOn = true;
-            updateSoundButton();
-            return true;
-          } catch (error) {
-            soundOn = false;
-            updateSoundButton();
-            return false;
-          }
-        }
+backgroundMusic.volume = 0.32;
 
-        function stopMusic() {
-          backgroundMusic.pause();
-          soundOn = false;
-          updateSoundButton();
-        }
+function updateSoundButton() {
+  soundBtn.setAttribute("aria-pressed", String(soundOn));
+  soundBtn.setAttribute(
+    "aria-label",
+    soundOn ? "إيقاف الموسيقى" : "تشغيل الموسيقى"
+  );
 
-        // Try autoplay when the page loads. Browsers may require a user gesture.
-        startMusic();
+  soundBtn.innerHTML = `♫ <span>الموسيقى: ${
+    soundOn ? "شغالة" : "مقفولة"
+  }</span>`;
+}
 
-        // If autoplay is blocked, retry after the visitor's first interaction.
-        document.addEventListener(
-          "pointerdown",
-          (event) => {
-            if (event.target.closest("#sound")) return;
-            if (backgroundMusic.paused) startMusic();
-          },
-          { once: true },
-        );
-        document.addEventListener(
-          "keydown",
-          () => {
-            if (backgroundMusic.paused) startMusic();
-          },
-          { once: true },
-        );
+async function startMusic() {
+  try {
+    await backgroundMusic.play();
+    soundOn = true;
+    updateSoundButton();
+    return true;
+  } catch (error) {
+    soundOn = false;
+    updateSoundButton();
+    return false;
+  }
+}
 
-        backgroundMusic.addEventListener("play", () => {
-          soundOn = true;
-          updateSoundButton();
-        });
-        backgroundMusic.addEventListener("pause", () => {
-          soundOn = false;
-          updateSoundButton();
-        });
+function stopMusic() {
+  backgroundMusic.pause();
+  soundOn = false;
+  updateSoundButton();
+}
 
-        soundBtn.addEventListener("click", async () => {
-          if (backgroundMusic.paused) {
-            const started = await startMusic();
-            if (started) {
-              chime(659);
-              toast("بدأت الموسيقى الهادئة");
-            } else toast("اضغطي مرة أخرى لتشغيل الموسيقى");
-          } else {
-            stopMusic();
-            toast("تم إيقاف الموسيقى");
-          }
-        });
+// محاولة التشغيل فور تحميل الصفحة
+startMusic();
 
-        function chime(freq = 523) {
-          if (!soundOn) return;
-          try {
-            audioContext =
-              audioContext ||
-              new (window.AudioContext || window.webkitAudioContext)();
-            if (audioContext.state === "suspended") audioContext.resume();
-            const osc = audioContext.createOscillator(),
-              gain = audioContext.createGain();
-            osc.type = "sine";
-            osc.frequency.value = freq;
-            gain.gain.setValueAtTime(0.0001, audioContext.currentTime);
-            gain.gain.exponentialRampToValueAtTime(
-              0.025,
-              audioContext.currentTime + 0.035,
-            );
-            gain.gain.exponentialRampToValueAtTime(
-              0.0001,
-              audioContext.currentTime + 0.4,
-            );
-            osc.connect(gain).connect(audioContext.destination);
-            osc.start();
-            osc.stop(audioContext.currentTime + 0.42);
-          } catch (e) {}
-        }
-        updateSoundButton();
+// إعادة المحاولة عند أول تفاعل مع الموقع
+function firstInteraction() {
+  if (backgroundMusic.paused) {
+    startMusic();
+  }
+
+  document.removeEventListener("click", firstInteraction);
+  document.removeEventListener("touchstart", firstInteraction);
+  document.removeEventListener("keydown", firstInteraction);
+}
+
+document.addEventListener("click", firstInteraction);
+document.addEventListener("touchstart", firstInteraction, {
+  passive: true
+});
+document.addEventListener("keydown", firstInteraction);
+
+// مزامنة حالة الصوت
+backgroundMusic.addEventListener("play", () => {
+  soundOn = true;
+  updateSoundButton();
+});
+
+backgroundMusic.addEventListener("pause", () => {
+  soundOn = false;
+  updateSoundButton();
+});
+
+// زر التحكم
+soundBtn.addEventListener("click", async () => {
+  if (backgroundMusic.paused) {
+    const started = await startMusic();
+
+    if (started) {
+      toast("بدأت الموسيقى الهادئة 🤍");
+    } else {
+      toast("تعذر تشغيل الموسيقى، حاولي مرة أخرى");
+    }
+  } else {
+    stopMusic();
+    toast("تم إيقاف الموسيقى");
+  }
+});
+
+updateSoundButton();
 
         // SCROLL REVEAL
         if ("IntersectionObserver" in window) {
